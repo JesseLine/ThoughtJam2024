@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class shoot_nearest_enemy : MonoBehaviour
+public class shootNearestEnemy : MonoBehaviour
 {
     public int radius = 99;
     public float rechargeTime = 1;
@@ -27,7 +27,7 @@ public class shoot_nearest_enemy : MonoBehaviour
             float nearestDist = (float)radius;
             Collider2D nearest = null;
             foreach(Collider2D col in nearby){
-                if(Vector2.Distance(col.transform.position, transform.position) < nearestDist){
+                if((col.gameObject.GetComponent<enemy>() as enemy ) != null && Vector2.Distance(col.transform.position, transform.position) < nearestDist){
                     nearest = col;
                     nearestDist = Vector2.Distance(col.transform.position, transform.position);
                 }
@@ -42,10 +42,9 @@ public class shoot_nearest_enemy : MonoBehaviour
                 Quaternion rotation = Quaternion.LookRotation (nearest.transform.position - projectile.transform.position, transform.TransformDirection(Vector3.up));
                 projectile.transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
 
-                Rigidbody2D projrb = projectile.AddComponent<Rigidbody2D>() as Rigidbody2D;
-                projrb.gravityScale = 0;
+                Rigidbody2D projrb = projectile.GetComponent<Rigidbody2D>() as Rigidbody2D;
 
-                Vector2 speed = (nearest.transform.position- projectile.transform.position);
+                Vector2 speed = (nearest.transform.position - projectile.transform.position);
                 speed.Normalize();
                 speed *= bulletSpeed;
                 projrb.velocity = speed;
