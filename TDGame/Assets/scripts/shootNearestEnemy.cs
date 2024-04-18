@@ -21,6 +21,9 @@ public class shootNearestEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if((gameObject.GetComponent<placementController>() as placementController).inPlacementMode){
+            return;
+        }
         if(Time.time > nextShootTime){
             Collider2D[] nearby = Physics2D.OverlapCircleAll(transform.position, radius); 
 

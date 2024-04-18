@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5451899993148277658}
   - component: {fileID: 465029641677294897}
   - component: {fileID: 5280582806511480501}
+  - component: {fileID: 8094614313117789828}
+  - component: {fileID: 6617991347282356033}
   m_Layer: 0
   m_Name: turret
   m_TagString: Untagged
@@ -101,3 +103,30 @@ MonoBehaviour:
   rechargeTime: 1
   bulletSpeed: 2
   bullet: {fileID: 4910221977181291121, guid: 64f3463695a5c08459a8e284832af7d9, type: 3}
+--- !u!114 &8094614313117789828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6537777005487819610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7fc275289932c4595780fa92d3dc3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 0}
+  inPlacementMode: 1
+  isInValidPosition: 0
+--- !u!210 &6617991347282356033
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6537777005487819610}
+  m_Enabled: 1
+  m_SortingLayerID: -1515626861
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
