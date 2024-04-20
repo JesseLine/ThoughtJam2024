@@ -10,7 +10,7 @@ public class cardLayout : MonoBehaviour
     public List<GameObject> cards;
     public float cardLength = .15f;
     public bool holdingTurret = false;
-
+    public energy energySystem;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +29,16 @@ public class cardLayout : MonoBehaviour
         if(Input.GetMouseButtonDown(0)){
             if(isActiveCard){
                 //active card was just clicked on.
-                print(activeCard);
-                holdingTurret = true;
-                cards[activeCard].SendMessage("Clicked", gameObject);
+                if (energySystem.currentEnergy >= (cards[activeCard].GetComponent<card>() as card).getCost()){
+
+                    print(activeCard);
+                    holdingTurret = true;
+                    cards[activeCard].SendMessage("Clicked", gameObject);
+                }
+                else{
+                    print("insufficient energy");
+                    //todo: animate failure (wiggle energy / turn red?)
+                }
             }
         }
         else{
@@ -89,6 +96,7 @@ public class cardLayout : MonoBehaviour
         print(card);
         for(int i = 0; i < cards.Count; i++){
             if(cards[i] == card){
+                energySystem.spendEnergy((cards[i].GetComponent<card>() as card).getCost());
                 Destroy(cards[i]);
                 cards.RemoveAt(i);
             }

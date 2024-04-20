@@ -760,4 +760,6 @@ MonoBehaviour:
   turret: {fileID: 6537777005487819610, guid: 024c999dd19edc54e8e71756f93e3378, type: 3}
   handContainer: {fileID: 0}
   image: {fileID: 4839809550067370994}
+  energyText: {fileID: 6108645616767738803}
+  cost: 15
   isActive: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class card : MonoBehaviour
 {
@@ -10,9 +11,20 @@ public class card : MonoBehaviour
     public GameObject turret;
     public GameObject handContainer;
     public GameObject image;
+    public TMP_Text energyText;
 
+    public float cost;
+    
     public bool isActive = false;
 
+    public void setCost(float newCost){
+        cost = newCost;
+        energyText.SetText(newCost.ToString());
+    }
+
+    public float getCost(){
+        return cost;
+    }
     //called by turret on successful placement
     public void Clicked(GameObject hand){
         handContainer = hand;
