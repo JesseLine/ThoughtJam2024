@@ -19,6 +19,10 @@ public class shootWave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if((gameObject.GetComponent<placementController>() as placementController).inPlacementMode){
+            return;
+        }
+        
         if(Time.time > nextShootTime){
             GameObject b = Instantiate(bullet);
             b.transform.position = transform.position;
