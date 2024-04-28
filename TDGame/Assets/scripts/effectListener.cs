@@ -6,11 +6,11 @@ using static effectManager;
 public class effectListener : MonoBehaviour
 {
     //see effectManager for usage
-
+    //mostly other scripts should just read these public values as needed though.
     public float damageMultiplier = 1;
     public float speedMultiplier = 1;
 
-    private Dictionary<GameObject, (effectType, float)> activeEffects;
+    private Dictionary<GameObject, (effectType, float)> activeEffects = new Dictionary<GameObject, (effectType, float)>();
 
     
     void OnTriggerEnter2D(Collider2D other)

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class effectManager : MonoBehaviour
 {
-    public float damageMultiplier;
-    public float speedMultiplier;
 
     public enum effectType{
         towerDamageBuff,

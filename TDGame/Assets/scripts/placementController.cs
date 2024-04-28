@@ -19,7 +19,6 @@ public class placementController : MonoBehaviour
         if (inPlacementMode){
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePos.z = 0f;
-            print(mousePos);
             transform.position = mousePos;
             CheckValiditiy();
             if(!Input.GetMouseButton(0)){

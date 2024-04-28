@@ -8,6 +8,7 @@ public class cannon : MonoBehaviour
     public int radius = 99;
     public float rechargeTime = 1;
     public float bulletSpeed = 2;
+    public float bulletDamage = 5;
     private float nextShootTime;
 
     public float rotationSpeed = 1;
@@ -26,6 +27,15 @@ public class cannon : MonoBehaviour
         if((gameObject.GetComponent<placementController>() as placementController).inPlacementMode){
             return;
         }
+
+        effectListener listener = gameObject.GetComponent<effectListener>() as effectListener;
+        float damageMultiplier = 1;
+        float speedMultiplier = 1;
+        if(listener){
+            damageMultiplier = listener.damageMultiplier;
+            speedMultiplier = listener.speedMultiplier;
+        }
+
 
         Collider2D[] nearby = Physics2D.OverlapCircleAll(transform.position, radius); 
 
@@ -57,13 +67,18 @@ public class cannon : MonoBehaviour
             projectile.transform.rotation = turret.transform.rotation;
 
             Rigidbody2D projrb = projectile.GetComponent<Rigidbody2D>() as Rigidbody2D;
+            cannonBullet blt = projectile.GetComponent<cannonBullet>() as cannonBullet;
+
+            blt.bulletDamage = bulletDamage * damageMultiplier;
 
             Vector2 speed = turret.transform.right;
             speed.Normalize();
-            speed *= bulletSpeed;
+            speed *= bulletSpeed * speedMultiplier;
             projrb.velocity = speed;
 
             nextShootTime = Time.time + rechargeTime;
+
+
         }
 
     }
