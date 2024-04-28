@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2233969261470024313}
   - component: {fileID: 123670474943097958}
   - component: {fileID: 5948361588649099451}
+  - component: {fileID: -1650251695894118644}
   m_Layer: 0
   m_Name: cannon
   m_TagString: Untagged
@@ -120,6 +121,18 @@ MonoBehaviour:
   card: {fileID: 0}
   inPlacementMode: 1
   isInValidPosition: 0
+--- !u!114 &-1650251695894118644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394561873763562648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84770fdd9ffe50849858e4d8a4562976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7233674364738646196
 GameObject:
   m_ObjectHideFlags: 0
