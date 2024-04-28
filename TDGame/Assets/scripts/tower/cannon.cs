@@ -15,25 +15,31 @@ public class cannon : MonoBehaviour
     public GameObject bullet;
     public GameObject turret;
 
+    private placementController pc;
+    private effectListener el;
+
     // Start is called before the first frame update
     void Start()
     {
         nextShootTime = Time.time + rechargeTime;
+        el = gameObject.GetComponent<effectListener>() as effectListener;
+        pc = gameObject.GetComponent<placementController>() as placementController;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if((gameObject.GetComponent<placementController>() as placementController).inPlacementMode){
+        if(pc.inPlacementMode){
             return;
         }
 
-        effectListener listener = gameObject.GetComponent<effectListener>() as effectListener;
+        
         float damageMultiplier = 1;
         float speedMultiplier = 1;
-        if(listener){
-            damageMultiplier = listener.damageMultiplier;
-            speedMultiplier = listener.speedMultiplier;
+        if(el){
+            damageMultiplier = el.damageMultiplier;
+            speedMultiplier = el.speedMultiplier;
         }
 
 
