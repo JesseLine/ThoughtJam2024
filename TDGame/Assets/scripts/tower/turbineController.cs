@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class turbine : MonoBehaviour
+public class turbineController : MonoBehaviour
 {
 
     public float additionalEnergy = 1;

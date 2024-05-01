@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class cannon : MonoBehaviour
+public class cannonController : MonoBehaviour
 {
     public int radius = 99;
     public float rechargeTime = 1;

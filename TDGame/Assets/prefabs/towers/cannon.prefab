@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1514094625811451908}
   - component: {fileID: 2233969261470024313}
-  - component: {fileID: 123670474943097958}
   - component: {fileID: 5948361588649099451}
   - component: {fileID: 7874728275156825360}
   - component: {fileID: 2700595255875007352}
+  - component: {fileID: 8594992863974587736}
   m_Layer: 0
   m_Name: cannon
   m_TagString: Untagged
@@ -89,25 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &123670474943097958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4394561873763562648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8086659a857e5b4189ad361b8b93fb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 99
-  rechargeTime: 4
-  bulletSpeed: 2
-  bulletDamage: 5
-  rotationSpeed: 111
-  bullet: {fileID: 4910221977181291121, guid: 28ef1a5847121f948a08729f1acd6339, type: 3}
-  turret: {fileID: 7233674364738646196}
 --- !u!114 &5948361588649099451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +175,25 @@ PolygonCollider2D:
       - {x: 0.44314796, y: 0.22432876}
       - {x: 0.20170271, y: 0.4617833}
   m_UseDelaunayMesh: 0
+--- !u!114 &8594992863974587736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394561873763562648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e627be675d9f4bc4589379d984f2b4ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 99
+  rechargeTime: 1
+  bulletSpeed: 2
+  bulletDamage: 5
+  rotationSpeed: 1
+  bullet: {fileID: 4910221977181291121, guid: 28ef1a5847121f948a08729f1acd6339, type: 3}
+  turret: {fileID: 7233674364738646196}
 --- !u!1 &7233674364738646196
 GameObject:
   m_ObjectHideFlags: 0

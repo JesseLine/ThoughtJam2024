@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5451899993148277658}
   - component: {fileID: 465029641677294897}
-  - component: {fileID: 5280582806511480501}
   - component: {fileID: 8094614313117789828}
   - component: {fileID: 6617991347282356033}
   - component: {fileID: 5803000837555792743}
   - component: {fileID: 5470581773121480320}
+  - component: {fileID: 2898256325060289949}
   m_Layer: 0
   m_Name: turret
   m_TagString: Untagged
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b3a0bfa20f7f58c40b24327070e8a6ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,23 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5280582806511480501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6537777005487819610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2f4ca209fb17e848aacec5f8f3ea1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 99
-  rechargeTime: 1
-  bulletSpeed: 2
-  bulletDamage: 3
-  blt: {fileID: 4910221977181291121, guid: 64f3463695a5c08459a8e284832af7d9, type: 3}
 --- !u!114 &8094614313117789828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,3 +175,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageMultiplier: 1
   speedMultiplier: 1
+--- !u!114 &2898256325060289949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6537777005487819610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93663965375e0fb42b112248998fd974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 99
+  rechargeTime: 1
+  bulletSpeed: 4
+  bulletDamage: 3
+  rotationSpeed: 111
+  blt: {fileID: 4910221977181291121, guid: 64f3463695a5c08459a8e284832af7d9, type: 3}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class grenade : MonoBehaviour
+public class grenadeController : MonoBehaviour
 {
     public float dropTime = 1;
     private float explosionTime;
