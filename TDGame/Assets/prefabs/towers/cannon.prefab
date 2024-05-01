@@ -191,7 +191,7 @@ MonoBehaviour:
   rechargeTime: 1
   bulletSpeed: 2
   bulletDamage: 5
-  rotationSpeed: 1
+  rotationSpeed: 111
   bullet: {fileID: 4910221977181291121, guid: 28ef1a5847121f948a08729f1acd6339, type: 3}
   turret: {fileID: 7233674364738646196}
 --- !u!1 &7233674364738646196
