@@ -967,12 +967,12 @@ MonoBehaviour:
   handContainer: {fileID: 1053975219}
   drawTime: 1
   activeDeck:
+  - {fileID: 6529403487489218504, guid: a77cf9a49f78b2b4885b9e0edc5c6e64, type: 3}
   - {fileID: 6529403487489218504, guid: 305b0f15bcba9364889f6f52ae0a199d, type: 3}
   - {fileID: 6529403487489218504, guid: ccceafb5d6e41de4c91c016d255dc3af, type: 3}
   - {fileID: 6529403487489218504, guid: f4df24fed89b36f45a0cf1e3b4cc8be9, type: 3}
   - {fileID: 6529403487489218504, guid: dae5c21fad8289e4588fe5094dd1051e, type: 3}
   - {fileID: 6529403487489218504, guid: 1541b57a022db624387cddf9f2b2afc1, type: 3}
-  - {fileID: 6529403487489218504, guid: a77cf9a49f78b2b4885b9e0edc5c6e64, type: 3}
 --- !u!212 &1351475340
 SpriteRenderer:
   m_ObjectHideFlags: 0
