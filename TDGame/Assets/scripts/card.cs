@@ -25,7 +25,7 @@ public class card : MonoBehaviour
     public float getCost(){
         return cost;
     }
-    //called by turret on successful placement
+    
     public void Clicked(GameObject hand){
         handContainer = hand;
         image.SetActive(false);
@@ -38,8 +38,8 @@ public class card : MonoBehaviour
         Destroy(turret);
     }
 
+    //called by turret on successful placement
     public void OnPlayed(){
-        print("played card here");
         handContainer.SendMessage("PlayCard", gameObject);
     }
 

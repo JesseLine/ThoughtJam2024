@@ -15,11 +15,8 @@ public class waveBullet : MonoBehaviour
     }
     void Update(){
         transform.localScale += new Vector3(speed*Time.deltaTime, speed*Time.deltaTime, 0);
-        print(transform.localScale);
 
         if(transform.localScale.x > range){
-            print(transform.localScale.x);
-            print(range);
             Destroy(gameObject);
         }
     }

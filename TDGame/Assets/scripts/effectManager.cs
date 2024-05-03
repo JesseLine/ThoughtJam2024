@@ -7,7 +7,8 @@ public class effectManager : MonoBehaviour
 
     public enum effectType{
         towerDamageBuff,
-        towerSpeedBuff
+        towerSpeedBuff,
+        towerFireRateBuff
     }
 
     public effectType effect;

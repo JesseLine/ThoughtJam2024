@@ -15,7 +15,6 @@ public class effectListener : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other)
     {
-        print(other);
         effectManager manager = other.gameObject.GetComponent<effectManager>() as effectManager;
         if(manager != null){
             effectType type = manager.getEffectType();
@@ -35,7 +34,6 @@ public class effectListener : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        print(other);
         if(activeEffects.ContainsKey(other.gameObject)){
             effectType type = activeEffects[other.gameObject].Item1;
             float value = activeEffects[other.gameObject].Item2;
