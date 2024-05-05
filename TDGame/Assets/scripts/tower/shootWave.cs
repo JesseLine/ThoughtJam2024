@@ -12,6 +12,7 @@ public class shootWave : MonoBehaviour
 
     private placementController pc;
     private effectListener el;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class shootWave : MonoBehaviour
         nextShootTime = Time.time + rechargeTime;
         el = gameObject.GetComponent<effectListener>() as effectListener;
         pc = gameObject.GetComponent<placementController>() as placementController;
+        anim = gameObject.GetComponent<Animator>() as Animator;
 
     }
 
@@ -37,11 +39,14 @@ public class shootWave : MonoBehaviour
 
         if(Time.time > nextShootTime){
             GameObject b = Instantiate(bullet);
+
             waveBullet wb = b.GetComponent<waveBullet>() as waveBullet;
             wb.bulletDamage = bulletDamage * damageMultiplier;
 
             b.transform.position = transform.position;
             nextShootTime = Time.time + rechargeTime;
+
+            anim.SetTrigger("slam");
         }
     }
 }
