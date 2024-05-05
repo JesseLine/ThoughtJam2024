@@ -7,7 +7,7 @@ public class shootWave : MonoBehaviour
     public float bulletDamage = 2;
     public float rechargeTime = 1;
     private float nextShootTime;
-
+ 
     public GameObject bullet;
 
     private placementController pc;

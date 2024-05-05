@@ -415,7 +415,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2cf7115f38fbb5b4cbf881475457612b, type: 3}
+  m_Sprite: {fileID: -746573413, guid: c77c253ec1cc3ae478646885f4060300, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -525,7 +525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wave Tower
+  m_text: Slammer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 609c20f0a1cd3ec47a7d658d4ba70b00, type: 2}
   m_sharedMaterial: {fileID: -2521596010614104748, guid: 609c20f0a1cd3ec47a7d658d4ba70b00, type: 2}

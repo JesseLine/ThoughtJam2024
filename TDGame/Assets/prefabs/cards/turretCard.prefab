@@ -525,7 +525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Turret Tower
+  m_text: Turret
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 609c20f0a1cd3ec47a7d658d4ba70b00, type: 2}
   m_sharedMaterial: {fileID: -2521596010614104748, guid: 609c20f0a1cd3ec47a7d658d4ba70b00, type: 2}
