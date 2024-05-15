@@ -24,6 +24,7 @@ public class mortarBullet : MonoBehaviour
                 startMode = false;
                 transform.position = new Vector3(target.x, maxYPosition, target.z);
                 rb.velocity = new Vector2(0, -rb.velocity.y);
+                transform.eulerAngles = new Vector3(0, 0, 180);
             }
 
         }

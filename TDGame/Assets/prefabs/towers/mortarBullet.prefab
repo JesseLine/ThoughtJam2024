@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 1788585166001178976}
   - component: {fileID: 9167217798760197540}
   - component: {fileID: 1423284424785091893}
-  - component: {fileID: 7454030334431178806}
   - component: {fileID: 1293897913901713642}
+  - component: {fileID: 1824483806205646641}
+  - component: {fileID: 5500136722085583307}
   m_Layer: 0
   m_Name: mortarBullet
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e0541f66c0d40d4d96a3d2ada3b8942, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d57f6297e3e9beb4ca946cf734224896, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,7 +115,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &7454030334431178806
+--- !u!114 &1293897913901713642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6668042143454044502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56061c041fae16e4f9fdfd1e6f595f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  speed: 1
+  target: {x: 0, y: 0, z: 0}
+--- !u!61 &1824483806205646641
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,7 +162,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05974847, y: 0.0015320778}
+  m_Offset: {x: 0.0017796159, y: 0.019576132}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -157,20 +173,17 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6537653, y: 0.22480178}
+  m_Size: {x: 0.18492615, y: 0.34153402}
   m_EdgeRadius: 0
---- !u!114 &1293897913901713642
-MonoBehaviour:
+--- !u!210 &5500136722085583307
+SortingGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6668042143454044502}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56061c041fae16e4f9fdfd1e6f595f1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
-  speed: 1
-  target: {x: 0, y: 0, z: 0}
+  m_SortingLayerID: -1515626861
+  m_SortingLayer: 2
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
