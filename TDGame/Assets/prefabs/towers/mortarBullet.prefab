@@ -130,6 +130,7 @@ MonoBehaviour:
   damage: 5
   speed: 1
   target: {x: 0, y: 0, z: 0}
+  explosion: {fileID: 2327474980533542827, guid: e07f8ef527c5b7743b860ee550ce37aa, type: 3}
 --- !u!61 &1824483806205646641
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162,7 +163,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0017796159, y: 0.019576132}
+  m_Offset: {x: 0.0008608699, y: 0.023434997}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -173,7 +174,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18492615, y: 0.34153402}
+  m_Size: {x: 0.15883291, y: 0.30000544}
   m_EdgeRadius: 0
 --- !u!210 &5500136722085583307
 SortingGroup:

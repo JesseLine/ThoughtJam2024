@@ -11,6 +11,7 @@ public class mortarBullet : MonoBehaviour
     private float maxYPosition = 10f;
     private bool startMode;
     private float epsilon = .1f;
+    public GameObject explosion;
     void Start(){
         print("bullet init'd");
         rb = gameObject.GetComponent<Rigidbody2D>() as Rigidbody2D;
@@ -31,6 +32,9 @@ public class mortarBullet : MonoBehaviour
         else{
             if(Vector3.Distance(transform.position, target) < epsilon){
                 //boom
+                GameObject expl = Instantiate(explosion);
+                expl.transform.position = transform.position;
+                
                 Destroy(gameObject);
             }
         }
