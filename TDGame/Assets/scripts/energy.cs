@@ -16,7 +16,7 @@ public class energy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentEnergy = startingEnergy;
+        LevelManager.main.energy = startingEnergy;
         nextEnergyGainTime = Time.time + 1f;
     }
 
@@ -24,18 +24,18 @@ public class energy : MonoBehaviour
     void Update()
     {
         if(Time.time > nextEnergyGainTime){
-            currentEnergy += energyGain;
+            LevelManager.main.energy += energyGain;
             nextEnergyGainTime = Time.time + 1;
         }
-        if (currentEnergy > maxEnergy){
-            currentEnergy = maxEnergy;
+        if (LevelManager.main.energy > maxEnergy){
+            LevelManager.main.energy = maxEnergy;
         }
 
-        messageText.SetText(currentEnergy.ToString());
+        messageText.SetText(LevelManager.main.energy.ToString());
 
     }
 
     public void spendEnergy(float energy){
-        currentEnergy -= energy;
+        LevelManager.main.energy -= energy;
     }
 }

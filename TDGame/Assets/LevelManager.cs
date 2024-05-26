@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
 
     public Transform[] path;
 
+    public double energy;
     private void Awake()
     {
         {

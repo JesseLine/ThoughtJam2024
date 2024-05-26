@@ -6,7 +6,7 @@ public class enemy : MonoBehaviour
 {
     // Start is called before the first frame update
     public float hp = 1.0f;
-
+    public float damage = 10f;
 
     void Start(){
 
@@ -22,4 +22,8 @@ public class enemy : MonoBehaviour
         }
     }
 
+    void reachEnd(){
+        LevelManager.main.energy -= damage;
+        Destroy(gameObject);
+    }
 }

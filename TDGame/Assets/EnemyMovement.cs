@@ -24,7 +24,7 @@ public class EnemyMovement : MonoBehaviour
 
             if(pathIndex == LevelManager.main.path.Length) 
             {
-                Destroy(gameObject);
+                gameObject.SendMessage("reachEnd");
                 return;
             }
             else
