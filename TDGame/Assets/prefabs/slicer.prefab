@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 5129327079177163539}
   - component: {fileID: 6764524487787583178}
   - component: {fileID: 4480228720835451285}
-  m_Layer: 0
+  - component: {fileID: 8631017937250667216}
+  m_Layer: 6
   m_Name: slicer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -185,3 +186,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8631017937250667216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8369012449939831004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbd83485d8a55041a9d79359f91a3a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 6764524487787583178}
+  moveSpeed: 10
