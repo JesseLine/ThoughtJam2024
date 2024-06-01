@@ -29,16 +29,11 @@ public class cardLayout : MonoBehaviour
         if(Input.GetMouseButtonDown(0)){
             if(isActiveCard){
                 //active card was just clicked on.
-                if (energySystem.currentEnergy >= (cards[activeCard].GetComponent<card>() as card).getCost()){
-
-                    print(activeCard);
-                    holdingTurret = true;
-                    cards[activeCard].SendMessage("Clicked", gameObject);
-                }
-                else{
-                    print("insufficient energy");
-                    //todo: animate failure (wiggle energy / turn red?)
-                }
+                print(activeCard);
+                holdingTurret = true;
+                cards[activeCard].SendMessage("Clicked", gameObject);
+                
+                
             }
         }
         else{
