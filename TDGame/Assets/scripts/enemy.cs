@@ -19,6 +19,7 @@ public class enemy : MonoBehaviour
         hp -= damage;
         if(hp < 0){
             Destroy(gameObject);
+            EnemySpawner.main.enemiesAlive--;
         }
     }
 

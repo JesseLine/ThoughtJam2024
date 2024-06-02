@@ -23,7 +23,7 @@ public class energy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time > nextEnergyGainTime){
+        if(Time.time > nextEnergyGainTime && EnemySpawner.main.getIsSpawning()){
             LevelManager.main.energy += energyGain;
             nextEnergyGainTime = Time.time + 1;
         }

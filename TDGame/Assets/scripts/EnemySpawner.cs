@@ -10,18 +10,20 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private int baseEnemies = 8;
     [SerializeField] private float enemiesPerSecond = 0.5f;
-    //probably will want to change this to a "next wave" button
-    [SerializeField] private float timeBetweenWaves = 5f;
     [SerializeField] private float difficultyScalingFactor = 0.75f;
+
+    public static EnemySpawner main;
 
     public static UnityEvent onEnemyDestroy = new UnityEvent();
     public static UnityEvent onNextWaveButtonClick = new UnityEvent();
 
     private int currentWave = 1;
     private float timeSinceLastSpawn;
-    private int enemiesAlive;
+    public int enemiesAlive;
     private int enemiesLeftToSpawn;
     private bool isSpawning = false;
+
+    
 
 
     // Start is called before the first frame update
@@ -30,6 +32,7 @@ public class EnemySpawner : MonoBehaviour
     {
         onEnemyDestroy.AddListener(EnemyDestroyed);
         onNextWaveButtonClick.AddListener(StartWave);
+        main = this;
     }
     void Start()
     {
@@ -99,5 +102,15 @@ public class EnemySpawner : MonoBehaviour
     private int EnemiesPerWave()
     {
         return Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentWave, difficultyScalingFactor));
+    }
+
+    public bool getIsSpawning()
+    {
+        return isSpawning;
+    }
+
+    public int getCurrentWave()
+    {
+        return currentWave;
     }
 }
